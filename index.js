@@ -40,7 +40,11 @@ Hint #2: you'll need to use the `math` object for parts of this calculation!
 When your math is correct, monthlyRate will equal 1073.64
 */
 
-
+1. let n1 = Math.pow((1 + monthlyInterestRate), 360);
+2. let numerator = principal * n1 * monthlyInterestRate;
+3. let denominator = n1 - 1;
+4. let monthlyRate = numerator / denominator;
+    console.log(monthlyRate);
 
 
 // 🏡 Task 3: Function
