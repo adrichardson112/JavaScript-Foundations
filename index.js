@@ -72,7 +72,7 @@ function mortgageCalculator () {
 
 For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
-*/
+*/ let 
 
 
 
