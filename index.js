@@ -92,7 +92,20 @@ Then, add control flow within your function such that IF creditScore is above 74
 Hint: To drop an interest rate by 5% you can take monthlyRate and multiply it by 0.95. Similarly, to increase an interest rate by 5% you'd do monthlyRate * 1.05. 
 */
 
+function mortgageCalculator2 (P, I, N, credit_score) {
+  let periods = N *12;
+  let name = "Ashley"; 
+  let monthlyRate = P * I /12 *(Math.pow(1+ I/12, periods))/(Math.pow(1+ I/12, periods)-1);
 
+  if (credit_score > 740) {
+    console.log(`${monthlyRate}` * 0.95);
+  } else if (credit_score < 660) {
+    console.log(`${monthlyRate}` * 1.05);
+  } else if (credit_score > 660 && credit_score < 740) {
+    console.log(`${monthlyRate}`);
+  }
+}
+mortgageCalculator2(200000, 0.05, 30, 760);
 
 
 // 🏡 Task 6: Loops
