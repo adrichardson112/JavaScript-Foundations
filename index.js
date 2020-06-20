@@ -53,7 +53,17 @@ When your math is correct, monthlyRate will equal 1073.64
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
 
-
+function mortgageCalculator () {
+    let principal = 200000;
+    let interestrate = 0.05;
+    let years = 30;
+    let name = "Ashley";
+    let monthlyInterestRate = interestrate / 12;
+    let periods = years * 12;
+    let monthlyRate = numerator / denominator;
+    return name + "your monthly rate is $" + monthlyRate;
+  }
+  console.log(mortgageCalculator());
 
 
 
