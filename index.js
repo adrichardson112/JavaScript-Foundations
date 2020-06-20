@@ -40,10 +40,10 @@ Hint #2: you'll need to use the `math` object for parts of this calculation!
 When your math is correct, monthlyRate will equal 1073.64
 */
 
-1. let n1 = Math.pow((1 + monthlyInterestRate), 360);
-2. let numerator = principal * n1 * monthlyInterestRate;
-3. let denominator = n1 - 1;
-4. let monthlyRate = numerator / denominator;
+let n1 = Math.pow((1 + monthlyInterestRate), 360);
+let numerator = principal * n1 * monthlyInterestRate;
+let denominator = n1 - 1;
+let monthlyRate = numerator / denominator;
     console.log(monthlyRate);
 
 
@@ -63,7 +63,7 @@ function mortgageCalculator () {
     let monthlyRate = numerator / denominator;
     return name + "your monthly rate is $" + monthlyRate;
   }
-  console.log(mortgageCalculator());
+  console.log(`${name} , your monthly rate is `+ `${monthlyRate}`);
 
 
 
@@ -72,10 +72,16 @@ function mortgageCalculator () {
 
 For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
-*/ let 
+*/ 
 
-
-
+function mortgageCalculator (P, I, N) {
+  let periods = N * 12;
+  let name = "Ashley";
+  let monthlyRate = P * I /12 *(Math.pow(1 + I/12, periods))/(Math.pow(1+ I/12, periods)-1);
+  console.log(`${name}, your monthly rate is `+ `${monthlyRate}`);
+  return;
+}
+mortgageCalculator(200000, 0.05, 30);
 
 
 // 🏡 Task 5: Conditionals
