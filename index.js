@@ -129,12 +129,12 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 function variableInterestRate (P, I, N) {
   let periods = N * 12;
   let name = "Ashley";
-  let variableRate= I - 0.02;
-  let monthlyRate = P * I /12 *(Math.pow(1 + I/12, periods))/(Math.pow(1+ I/12, periods)-1);
+  I= I - 0.02;
 
   for (i = 0; i <= 10; i++) { 
-    variableRate = I + 0.005;
-    console.log(`${name}, with an interest rate of ${variableRate} , your monthly rate is `+ `${monthlyRate}`);
+    let monthlyRate = P * I /12 *(Math.pow(1 + I/12, periods)) /(Math.pow(1+ I/12, periods)-1);
+    console.log(`${name}, with an interest rate of ${I} , your monthly rate is `+ `${monthlyRate}`);
+    I = I + 0.005;
   }
 }
 variableInterestRate(200000, 0.03, 30);
